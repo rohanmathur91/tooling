@@ -1,4 +1,5 @@
 import { Greet } from "./Greet";
+import "./Greet.css";
 
 console.log(Greet({ name: "rohan" }));
 
