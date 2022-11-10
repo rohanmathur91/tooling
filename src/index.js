@@ -1,3 +1,7 @@
-import { add } from "./math";
+import { Greet } from "./Greet";
 
-console.log(add(10, 20));
+console.log(Greet({ name: "rohan" }));
+
+const heading = document.createElement("h1");
+heading.innerText = Greet({ name: "rohan" });
+document.body.append(heading);
