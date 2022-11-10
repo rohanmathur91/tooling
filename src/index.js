@@ -1,8 +1,16 @@
-import { Greet } from "./Greet";
-import "./Greet.css";
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { Greet } from "./components";
 
-console.log(Greet({ name: "rohan" }));
+const rootElement = document.createElement("div");
+document.body.append(rootElement);
 
-const heading = document.createElement("h1");
-heading.innerText = Greet({ name: "rohan" });
-document.body.append(heading);
+const root = createRoot(rootElement);
+
+const App = (
+  <React.Fragment>
+    <Greet name="rohan" />
+  </React.Fragment>
+);
+
+root.render(App);

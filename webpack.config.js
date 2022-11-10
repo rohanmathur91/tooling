@@ -12,6 +12,16 @@ module.exports = {
         test: /\.ts$/i,
         use: ["ts-loader"],
       },
+      {
+        test: /\.(tsx|jsx|ts|js)$/i,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-react"],
+          },
+        },
+      },
     ],
   },
   resolve: {
